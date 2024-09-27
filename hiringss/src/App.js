@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './header';
+import TopCompanies  from './topcompany'
 
 function App() {
   return (
@@ -11,6 +12,24 @@ function App() {
      <section className="categories">
       <div className="container">
         <CategorySection />
+      </div>
+     </section>
+
+     <section className='topCompanies'>
+      <div className='container'>
+        <TopCompanies/>
+      </div>
+     </section>
+
+     <section className='resumeSection'>
+      <div className='container'>
+        <ResumeSection />
+      </div>
+     </section>
+
+     <section className='HireSection'>
+      <div className='container'>
+        <SkillOnHireSection />
       </div>
      </section>
     </div>
@@ -142,6 +161,93 @@ const ArrowButton = ({ direction }) => {
   );
 };
 
+
+const ResumeSection = () => {
+  return (
+    <div className="container my-5 d-flex align-items-center justify-content-between">
+      {/* Left Side - Images */}
+      <div className="images-section d-flex flex-column">
+        <div className="image-top mb-3">
+          <img
+            src="https://via.placeholder.com/300x200.png?text=Image+1"
+            alt="Handshake"
+            className="img-fluid"
+          />
+        </div>
+        <div className="image-bottom">
+          <img
+            src="https://via.placeholder.com/300x200.png?text=Image+2"
+            alt="Business Discussion"
+            className="img-fluid"
+          />
+        </div>
+      </div>
+
+      {/* Right Side - Text and CTA */}
+      <div className="text-section">
+        <h1 className="display-5 fw-bold">
+          Add Your Resume to <span className="text-primary">Skill On Hire</span>
+        </h1>
+        <p className="lead">
+          Discover your next career move, freelance gig, or internship
+        </p>
+
+        {/* Upload Button */}
+        <div className="my-3">
+          <button className="btn btn-primary btn-lg">
+            Upload Your CV
+          </button>
+        </div>
+
+        {/* Footer Text */}
+        <p>
+          Already listed your agency?{" "}
+          <span className="fw-bold">Ask your clients to leave a review.</span>
+        </p>
+      </div>
+    </div>
+  );
+};
+
+
+const SkillOnHireSection = () => {
+  return (
+    <div className="container my-5 d-flex align-items-center justify-content-between">
+      {/* Left Side - Text and Button */}
+      <div className="text-section">
+        <h2 className="display-6 fw-bold">
+          How Skill On Hire Works<span className="text-primary">?</span>
+        </h2>
+        <p className="lead">
+          Discover your next career move, freelance gig, or internship
+        </p>
+
+        {/* Call to Action */}
+        <h3 className="fw-bold">
+          Get Started, <span className="text-primary">It's Free!</span>
+        </h3>
+        <p>Receive Proposals from 5 Hand Picked Agencies</p>
+
+        {/* CTA Button */}
+        <button className="btn btn-primary btn-lg">
+          Start Recruiting Now
+        </button>
+      </div>
+
+      {/* Right Side - Video Placeholder */}
+      <div className="video-section">
+        <div className="embed-responsive embed-responsive-16by9">
+          <iframe
+            className="embed-responsive-item"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Placeholder video
+            allowFullScreen
+            title="Skill On Hire Video"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 
 export default App;
