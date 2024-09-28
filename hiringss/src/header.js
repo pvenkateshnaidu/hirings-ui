@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import logo from './images/logo.svg';
+import logotext from './images/logotext.svg';
+import loginIcon from './images/person.svg';
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -13,14 +16,14 @@ const Header = () => {
       <header className="App-header">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
-            <a className="navbar-brand" href="#">MySite</a>
+            <a className="navbar-brand" href="#"><img src={logo} alt="logo" /><img src={logotext} alt="logotext" className='ms-2'/></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item">
+                <li className="nav-item active">
                   <a className="nav-link" href="#">Home</a>
                 </li>
                 <li className="nav-item">
@@ -62,8 +65,8 @@ const Header = () => {
                   <a className="nav-link" href="#">Recruiting</a>
                 </li>
                 <li className='nav-item'>
-                  <a className="nav-link" href="#">
-                  Login
+                  <a className="nav-link btn btn-primary" href="#">
+                  <img src={loginIcon} alt="login"/>Login
                   </a>
                 </li>
               </ul>

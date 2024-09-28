@@ -1,83 +1,84 @@
 import React from "react";
 const companies = [
     {
-      name: "Google",
+    
       rating: 68,
       location: "India, Hyderabad",
       jobs: 25,
-      logo: "https://logo.clearbit.com/google.com"
+      logo: "images/google.png"
     },
     {
-      name: "Microsoft",
+     
       rating: 32,
       location: "Noida, Pune",
       jobs: 86,
-      logo: "https://logo.clearbit.com/microsoft.com"
+      logo: "images/microsoft.png"
     },
     {
-      name: "Infosys",
+    
       rating: 68,
       location: "India, Hyderabad",
       jobs: 25,
-      logo: "https://logo.clearbit.com/infosys.com"
+      logo: "images/infosys.png"
     },
     {
-      name: "Amazon",
+     
       rating: 134,
       location: "India, Hyderabad",
       jobs: 25,
-      logo: "https://logo.clearbit.com/amazon.com"
+      logo: "images/amazon.png"
     },
     {
-      name: "PayPal",
+     
       rating: 68,
       location: "Ahmedabad",
       jobs: 25,
-      logo: "https://logo.clearbit.com/paypal.com"
+      logo: "images/paypal.png"
     },
     {
-      name: "Salesforce",
+    
       rating: 68,
       location: "India, Hyderabad",
       jobs: 25,
-      logo: "https://logo.clearbit.com/salesforce.com"
+      logo: "images/salesforce.png"
     },
     {
-      name: "Facebook",
+     
       rating: 68,
       location: "Chennai, Tamilnadu",
       jobs: 25,
-      logo: "https://logo.clearbit.com/facebook.com"
+      logo: "images/facebook.png"
     },
     {
-      name: "Flipkart",
+      
       rating: 53,
       location: "Bangalore",
       jobs: 25,
-      logo: "https://logo.clearbit.com/flipkart.com"
+      logo: "images/flipkart.png"
     }
   ];
   
-  const CompanyCard = ({ company }) => (
+  const CompanyCard = ({ company }) => {
+    return(
     <div className="col-md-3">
-      <div className="company-card card p-3 text-center h-100">
-        <img src={company.logo} alt={company.name} className="card-img-top mx-auto" style={{ width: "80px" }} />
+      <div className="company-card card h-100">
         <div className="card-body">
-          <h5 className="card-title">{company.name}</h5>
+        <img src={require(`./${company.logo}`)} alt={company.name} className="card-img-top mx-auto" style={{ width: "auto", height:"35px",objectfit:"contain" }} />
           <div className="rating">
             <span className="stars">★★★★★</span> ({company.rating})
           </div>
           <p className="location">{company.location}</p>
-          <p className="jobs">{company.jobs} Open Jobs</p>
+          <p className="jobs m-0">{company.jobs} Open Jobs</p>
         </div>
       </div>
     </div>
-  );
+    );
+  };
   
   const TopCompanies = () => (
-    <div className="container my-5">
-      <h1 className="text-center">Top companies hiring now</h1>
-      <p className="text-center">Discover your next career move, freelance gig, or internship</p>
+    <div className="container">
+      <h1 className="text-start section-heading">Top companies hiring now</h1>
+      <p className="text-start mb-4">Discover your next career move, freelance gig, or internship</p>
       <div className="row g-3 justify-content-center">
         {companies.map((company, index) => (
           <CompanyCard key={index} company={company} />

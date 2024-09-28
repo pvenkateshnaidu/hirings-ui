@@ -1,21 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './header';
-import TopCompanies  from './topcompany'
+import SearchIcon from './images/search.svg';
+import TopCompanies  from './topcompany';
+import BannerImage from './images/Person.png';
 
 function App() {
   return (
     <div className="App">
      <Header />
      
+     <section className="banner">
      <Banner />
-     <section className="categories">
+     </section>
+
+     <section className="categories section">
       <div className="container">
         <CategorySection />
       </div>
      </section>
 
-     <section className='topCompanies'>
+     <section className='topCompanies section'>
       <div className='container'>
         <TopCompanies/>
       </div>
@@ -38,24 +43,26 @@ function App() {
 
 const Banner = () => {
   return (
-    <section className="banner">
-      <div className="banner-text">
-        <h1>
-          Join the Next Generation of <span className="highlight">Job Hunters</span> and upload your video CV now!
-        </h1>
-        <p>Everything you need is one search away...!!</p>
-        <SearchBar />
-        <PopularSearches />
-        <Stats />
+   
+      <div className="container ">
+        <div className='row z-index5 position-relative'>
+          <div className='col-md-8'>
+            <h1 className='heading'>
+            Join the Next Generation of <span className="highlight">Job Hunters</span> and upload your video CV now!
+            </h1>
+            <p className='banner-text'>Everything you need is one search away...!!</p>
+            <SearchBar />
+            <PopularSearches />
+            <Stats />
+          </div>
+        </div>
        
+       
+    
+        <div className="banner-image">
+          <img src={BannerImage} alt="Person" className='img-fluid'/>
+        </div>
       </div>
-      <div className="banner-image">
-        <img src="path-to-your-image.jpg" alt="Person" />
-      </div>
-
-      
-    </section>
-
 
   );
 };
@@ -63,15 +70,21 @@ const Banner = () => {
 const SearchBar = () => {
   return (
     <div className="search-bar">
+      <img src={SearchIcon} alt="search" />
+
+      <div className='searchelement'>
       <input type="text" placeholder="Search jobs by 'title'" />
-      <select>
-        <option>Select Experience</option>
-        <option>Entry Level</option>
-        <option>Mid Level</option>
-        <option>Senior Level</option>
-      </select>
-      <input type="text" placeholder="Enter Location" />
-      <button>Find Jobs</button>
+      </div>
+      <div className='searchelement'>
+        <select>
+          <option>Select Experience</option>
+          <option>Entry Level</option>
+          <option>Mid Level</option>
+          <option>Senior Level</option>
+        </select>
+      </div>
+      <input type="text" placeholder="Enter Location"  className='border-0'/>
+      <button className='btn btn-primary fj' type='submit'>Find Jobs</button>
     </div>
   );
 };
@@ -95,13 +108,13 @@ const Stats = () => {
   return (
     <div className="stats">
       <div className="stat">
-        265 K+<span>Daily Jobs Posted</span>
+        <strong>265 K+</strong><span>Daily Jobs Posted</span>
       </div>
       <div className="stat">
-        17 K+<span>Recruiters</span>
+      <strong>17 K+</strong><span>Recruiters</span>
       </div>
       <div className="stat">
-        15 K+<span>Freelancers</span>
+      <strong>15 K+</strong><span>Freelancers</span>
       </div>
     </div>
   );
@@ -109,26 +122,29 @@ const Stats = () => {
 
 const CategorySection = () => {
   const categories = [
-    { name: "Retail and Products", jobs: 563, icon: "retail-icon" },
-    { name: "Content Writer", jobs: 142, icon: "content-writer-icon" },
-    { name: "Marketing & Sales", jobs: 1526, icon: "marketing-icon" },
-    { name: "Finance", jobs: 168, icon: "finance-icon" },
-    { name: "Human Resources", jobs: 165, icon: "hr-icon" },
-    { name: "Market Research", jobs: 532, icon: "market-research-icon" },
-    { name: "Customer Help", jobs: 168, icon: "customer-help-icon" },
-    { name: "Security Analyst", jobs: 254, icon: "security-analyst-icon" },
-    { name: "Software", jobs: 1856, icon: "software-icon" },
-    { name: "Management", jobs: 965, icon: "management-icon" }
+    { name: "Retail and Products", jobs: 563, icon: "images/products.png" },
+    { name: "Content Writer", jobs: 142, icon: "images/contentwriter.png" },
+    { name: "Marketing & Sales", jobs: 1526, icon: "images/marketing.png" },
+    { name: "Finance", jobs: 168, icon: "images/finance.png" },
+    { name: "Human Resources", jobs: 165, icon: "images/humanresource.png" },
+    { name: "Market Research", jobs: 532, icon: "images/marketresearch.png" },
+    { name: "Customer Help", jobs: 168, icon: "images/customerResearch.png" },
+    { name: "Security Analyst", jobs: 254, icon: "images/securityanalyst.png" },
+    { name: "Software", jobs: 1856, icon: "images/software.png" },
+    { name: "Management", jobs: 965, icon: "images/management.png" }
   ];
+ 
 
   return (
-    <section className="">
-      <h2>Browse by <span className="highlight">category</span></h2>
-      <p>Search and connect with the right candidates faster.</p>
+    <div className="text-center">
+      <h2 className='section-heading'>Browse by <span className="highlight">category</span></h2>
+      <p className='text'>Search and connect with the right candidates faster.</p>
       <div className="category-container">
         <ArrowButton direction="left" />
         <div className="category-cards">
+
           {categories.map((category, index) => (
+            
             <CategoryCard
               key={index}
               name={category.name}
@@ -139,16 +155,20 @@ const CategorySection = () => {
         </div>
         <ArrowButton direction="right" />
       </div>
-    </section>
+    </div>
   );
 };
 
 const CategoryCard = ({ name, jobs, icon }) => {
   return (
     <div className="category-card">
-      <div className={`icon ${icon}`}></div>
+      <div className={`icon ${icon}`}>
+        <img src={require(`./${icon}`)} alt={name}/>
+      </div>
+      <div className='text-start'>
       <h3>{name}</h3>
       <p>{jobs} Jobs Available</p>
+      </div>
     </div>
   );
 };
@@ -229,7 +249,7 @@ const SkillOnHireSection = () => {
         <p>Receive Proposals from 5 Hand Picked Agencies</p>
 
         {/* CTA Button */}
-        <button className="btn btn-primary btn-lg">
+        <button className="btn btn-primary btn-lg" type='button'>
           Start Recruiting Now
         </button>
       </div>
