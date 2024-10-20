@@ -64,7 +64,7 @@ const Banner = () => {
           <div className='row z-index5 position-relative'>
             <div className='col-md-8'>
               <h1 className='heading'>
-              Join the Next Generation of <span className="highlight">Job Hunters</span> and upload your video CV now!
+              Join the Next Generation of <span className="highlight">Job HIRING</span> and upload your video CV now!
               </h1>
               <p className='banner-text'>Everything you need is one search away...!!</p>
               <SearchBar />
