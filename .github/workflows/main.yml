@@ -30,10 +30,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Setup Node 16
+      - name: Setup Node 20
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
 
       - name: chmod
         run: chmod -R +x ./.github
