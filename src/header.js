@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Outlet, Link } from "react-router-dom";
 import logo from './images/logo.svg';
 import logotext from './images/logotext.svg';
 import loginIcon from './images/person.svg';
@@ -12,7 +13,7 @@ const Header = () => {
 
   
   return (
-   
+    <>
       <header className="App-header">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container">
@@ -24,7 +25,7 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item active">
-                  <a className="nav-link" href="#">Home</a>
+                  <Link to='/home' className="nav-link">Home</Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Search Jobs</a>
@@ -65,16 +66,17 @@ const Header = () => {
                   <a className="nav-link" href="#">Recruiting</a>
                 </li>
                 <li className='nav-item'>
-                  <a className="nav-link btn btn-primary" href="#">
+                  <Link className="nav-link btn btn-primary" to="/login">
                   <img src={loginIcon} alt="login"/>Login
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
-   
+      <Outlet />
+      </>
   );
 
 }
