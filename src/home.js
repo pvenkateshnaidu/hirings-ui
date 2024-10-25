@@ -93,7 +93,7 @@ const Banner = () => {
         </div>
         <div className='searchelement'>
           <select>
-            <option>Select Experience</option>
+            <option>Select Experience Level</option>
             <option>Entry Level</option>
             <option>Mid Level</option>
             <option>Senior Level</option>
