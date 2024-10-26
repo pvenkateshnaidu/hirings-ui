@@ -34,24 +34,7 @@ const Header = () => {
                   <a className="nav-link" href="#">Job Alerts</a>
                 </li>
 
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded={dropdownOpen}
-                    onClick={toggleDropdown}
-                  >
-                    Employers
-                  </a>
-                  <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`} aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="#">Web Development</a></li>
-                    <li><a className="dropdown-item" href="#">App Development</a></li>
-                    <li><a className="dropdown-item" href="#">SEO</a></li>
-                  </ul>
-                </li>
+                
 
                 <li className="nav-item">
                   <a className="nav-link" href="#">Career Advice</a>
@@ -59,15 +42,21 @@ const Header = () => {
               </ul>
 
               <ul className='navbar-nav ms-auto'>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link" href="#">Register your CV</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Recruiting</a>
-                </li>
+                </li> */}
                 <li className='nav-item'>
                   <Link className="nav-link btn btn-primary" to="/login">
                   <img src={loginIcon} alt="login"/>Login
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/postjob">
+                    Employers
                   </Link>
                 </li>
               </ul>

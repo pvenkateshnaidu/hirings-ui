@@ -48,6 +48,7 @@ body {
   .nav-link{
     font-weight: 600 !important;
     font-size: 14px !important;
+    padding: 10px 20px !important;
   }
   .nav-item.active .nav-link{
     color: #3C65F5 !important;
@@ -60,7 +61,7 @@ body {
     height: 40px;
   }
   .collapse.navbar-collapse{
-    padding-left: 150px;
+    padding-left: 50px;
   }
 
   

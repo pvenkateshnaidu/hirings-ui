@@ -1,0 +1,95 @@
+body{
+    background: #fff !important;
+}
+.aside{
+    background: #185DB9;
+    width: 400px;
+    height:100vh;
+    padding: 50px 30px;
+}
+.fz-14{
+    font-size: 16px;
+}
+.flex-1{
+    flex: 1;
+}
+.list-style-default{
+    list-style: none;
+    padding:0
+}
+.mt-10{
+    margin-top: 6rem;
+}
+.h3{
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+}
+.list-style-default li{
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+.btn-white{
+    width: 100%;
+    background: #00AAFF;
+    display: block;
+    color: #fff !important;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.signout{
+    color:#F91616
+}
+.form-heading{
+    color: #202020;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.postjob-form label.consult{
+    color:#666666;
+    font-size: 13px;
+    font-weight: 400;
+}
+.postjob-form{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.postjob-form label{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+}
+.postjob-form .form-control{
+    border-color: #E8E8E8;
+    max-width: 400px;
+    background: none;
+}
+.postjob-form input::-webkit-input-placeholder{
+    color:#CACACA !important;
+    font-size:14px
+}
+.number-of-employees .btn-primary{
+    background: none;
+    color:#333333 !important;
+    border-color: #E8EEFF;
+    white-space: nowrap;
+    font-size: 13px;
+}
+.form-check-input[type=checkbox]{
+    border: 1px solid #C8D5F8;
+}
+.post-job{
+    width:240px;
+    height: 50px;
+    background: #1F7BF4 !important;
+}
+.btn-check:checked+.btn,
+.btn-check:hover+.btn{
+    color:#fff !important
+}
+.text-danger{
+    font-size: 14px;
+}
