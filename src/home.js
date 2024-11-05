@@ -116,6 +116,7 @@ const Banner = () => {
         <a href="#">PHP</a>
         <a href="#">Senior</a>
         <a href="#">Engineer</a>
+        <a href="#">UI Developer</a>
       </div>
     );
   };
