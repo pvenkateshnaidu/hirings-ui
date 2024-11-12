@@ -8,8 +8,8 @@ on:
 
 env:
   applicationfolder: ''
-  AWS_REGION: us-east-1
-  S3BUCKET: www.toptrades.ai
+  AWS_REGION: ap-south-1
+  S3BUCKET: hirings-ui
   CI: false
 
 
