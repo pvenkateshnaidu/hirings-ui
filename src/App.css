@@ -438,5 +438,10 @@ a.text-secondary{
   line-height: 30px;
   color: #969AA1 !important;
 }
+.form-control::-webkit-input-placeholder{
+  /* border:1px solid #ddd; */
+  color:#6b7274 !important;
+  font-size: 14px
+}
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');

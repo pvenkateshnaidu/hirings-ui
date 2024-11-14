@@ -6,8 +6,7 @@
     font-size: 1rem;
 }
 .login .nav-link{
-    width: 350px;
-    display: inline-block;
+    display:block;
     padding: 10px 25px;
     border: 1px solid #E1E2E2;
     margin: 1rem 0;
@@ -22,13 +21,41 @@
 .login-form-container{
   text-align: center;
   width: 400px;
+  padding: 35px;
+    box-shadow: 2px 2px 15px #e6ecff;
 }
 label{
     font-size: 0.875rem;
     color: #05264E;
+    font-weight:500
 }
 .btn-signin{
+    width:100%;
     background: #3C65F5 !important;
-    width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
+}
+.fz-12{
+    font-size: 12px;
+}
+.seperator{
+    position: relative;
+}
+.seperator span{
+    z-index: 4;
+    position: relative;
+    background: #fff;
+    font-size: 13px;
+    color: #9f9f9f;
+}
+.seperator:after{
+
+        content: '';
+        position: absolute;
+        background: #e2e2e2;
+        height: 1px;
+        left: 0;
+        right: 0;
+        top: 12px;
+        z-index: 0;
+    
 }
