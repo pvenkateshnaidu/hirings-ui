@@ -126,7 +126,7 @@ body {
 }
   ::-webkit-input-placeholder,
   select{
-    color: #9B9B9B;
+    color: #9B9B9B
   }
   
   .search-bar button {
