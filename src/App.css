@@ -225,6 +225,7 @@ body {
   .category-card p {
     font-size: 0.9rem;
     color: #69767B;
+    margin: 0;
   }
   
   .arrow-button {
