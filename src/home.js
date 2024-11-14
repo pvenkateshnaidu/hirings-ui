@@ -26,25 +26,25 @@ const Home = () => {
         </div>
         </section>
 
-        <section className='section bg-white'>
+        {/* <section className='section bg-white'>
         <div className='container'>
         <ResumeSection />
         </div>
-        </section>
+        </section> */}
 
-        <section className='section'>
+        {/* <section className='section'>
         <div className='container'>
         <SkillOnHireSection />
         </div>
-        </section>
+        </section> */}
 
-        <section className='section bg-white hirings-section'>
+        {/* <section className='section bg-white hirings-section'>
         <HiringsNumbers />
-        </section>
+        </section> */}
 
-        <section className='section'>
+        {/* <section className='section'>
         <Testimonials />
-        </section>
+        </section> */}
 
         <section className='subscribe'>
         <Subscribe />
@@ -246,45 +246,45 @@ const Banner = () => {
   };
   
   
-  const SkillOnHireSection = () => {
-    return (
-      <div className="row align-items-center justify-content-between">
-        <div className='text-center mb-4'>
-          <h2 className="heading fw-bold mb-0">How Skill On Hire Works<span className="text-primary">?</span></h2>
-          <p className="lead mb-0 fw-light">Discover your next career move, freelance gig, or internship</p>
-          </div>
-        {/* Left Side - Text and Button */}
-        <div className='col-md-6'>
-          <div className="text-section">
+  // const SkillOnHireSection = () => {
+  //   return (
+  //     <div className="row align-items-center justify-content-between">
+  //       <div className='text-center mb-4'>
+  //         <h2 className="heading fw-bold mb-0">How Skill On Hire Works<span className="text-primary">?</span></h2>
+  //         <p className="lead mb-0 fw-light">Discover your next career move, freelance gig, or internship</p>
+  //         </div>
+  //       {/* Left Side - Text and Button */}
+  //       <div className='col-md-6'>
+  //         <div className="text-section">
            
   
-            {/* Call to Action */}
-            <h3 className="fw-bold">
-              Get Started, <span className="text-primary">It's Free!</span>
-            </h3>
-            <p className='section-text'>Receive Proposals from 5 Hand Picked <br />Agencies</p>
+  //           {/* Call to Action */}
+  //           <h3 className="fw-bold">
+  //             Get Started, <span className="text-primary">It's Free!</span>
+  //           </h3>
+  //           <p className='section-text'>Receive Proposals from 5 Hand Picked <br />Agencies</p>
   
-            {/* CTA Button */}
-            <button className="btn btn-primary btn-lg cv-btn mt-5" type='button'>
-              Start Recruiting Now
-            </button>
-          </div>
-        </div>
+  //           {/* CTA Button */}
+  //           <button className="btn btn-primary btn-lg cv-btn mt-5" type='button'>
+  //             Start Recruiting Now
+  //           </button>
+  //         </div>
+  //       </div>
   
-        {/* Right Side - Video Placeholder */}
-        <div className='col-md-6'>
+  //       {/* Right Side - Video Placeholder */}
+  //       <div className='col-md-6'>
           
-              <iframe
-                className="embed-responsive-item"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Placeholder video
-                allowFullScreen
-                title="Skill On Hire Video"
-              ></iframe>
+  //             <iframe
+  //               className="embed-responsive-item"
+  //               src="https://www.youtube.com/embed/dQw4w9WgXcQ" // Placeholder video
+  //               allowFullScreen
+  //               title="Skill On Hire Video"
+  //             ></iframe>
             
-        </div>
-      </div>
-    );
-  };
+  //       </div>
+  //     </div>
+  //   );
+  // };
   
   
   const data = [
