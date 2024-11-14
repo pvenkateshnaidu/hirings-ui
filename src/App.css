@@ -366,12 +366,13 @@ iframe{
   transform: rotate(180deg);
 }
 .subscribe{
-  background: #3C65F5;
+  background: #f4f7ff;
   padding: 10px 0;
 }
 .subscribe p{
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
+  color:#000
 }
 .flex-1{
   flex: 1;
@@ -380,7 +381,7 @@ iframe{
   background: #0F193A;
     color: #fff;
     border-color: #0F193A;
-    height: 60px;
+    height: 45px;
     width: 146px;
     border-radius: 0;
 }

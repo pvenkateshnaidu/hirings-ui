@@ -376,26 +376,24 @@ const Banner = () => {
   const Subscribe = () => {
     return (
       <div className='container'>
-        <div className='row align-items-center offset-md-2'>
-          <div className='col-md-5'>
-          <p className='m-0 text-white'>New Things Will Always Update Regularly</p>
-          </div>
+        <div className='row align-items-center justify-content-center'>
           
-          <div className='col-md-5'>
-            <div className='card border-0 rounded-0'>
-              <div className='card-body pl-15'>
-                <div className='d-flex align-items-center'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                <p className='m-0 w-auto'>New Things Will Always Update Regularly</p>
+          
+            
+                
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                   <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
-                  </svg>
-                  <form className='d-flex flex-1'>
+                  </svg> */}
+                  <form className='col-md-4'>
+                    <div className='input-group'>
                     <input type='text' name='subscribe' className='form-control border-0 form-input' placeholder='Enter Your Email Address'/>
-                    <button type='submit' className='submit'>Subscribe</button>
+                    <button type='submit' className='submit btn btn-primary'><i class="bi bi-send me-1"></i>Subscribe</button>
+                    </div>
                   </form>
-                </div>
-              </div>
-            </div>
-          </div>
+                
+              
+       
         </div>
       </div>
     )
