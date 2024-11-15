@@ -59,6 +59,14 @@ body {
     width: 110px;
     border-radius: 25px;
     height: 40px;
+    padding: 0 !important;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-link.btn-primary:hover{
+    color:#fff
   }
   .collapse.navbar-collapse{
     padding-left: 50px;

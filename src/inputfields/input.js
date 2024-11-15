@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputField = ({label,value,onChange,type='text',placeholder,required,id,wrapInDiv = true,className,divClassName,checked,styled = false,options = [],name,error}) =>{
+const InputField = ({autocomplete,label,value,onChange,type='text',placeholder,required,id,wrapInDiv = true,className,divClassName,checked,styled = false,options = [],name,error}) =>{
     const input = type === 'checkbox' ? (
         styled ? (
         <>
@@ -63,6 +63,7 @@ const InputField = ({label,value,onChange,type='text',placeholder,required,id,wr
       required={required}
       className="form-control"
       id={id}
+      autoComplete={autocomplete}
     />
   </>
 );
