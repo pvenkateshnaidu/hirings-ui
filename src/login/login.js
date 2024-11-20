@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../auth/authslice';
 import InputField from '../inputfields/input';
 
+// http://hirings-ui.s3-website.ap-south-1.amazonaws.com/
+
 const Login = () =>{
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -69,41 +71,34 @@ useEffect(() => {
         <div className='container'>
             <div className='login-form-container ms-auto me-auto'>
                 <p className="text-black text-start fw-bold">Login</p>
-            
-                
-
                 <form className='text-start' onSubmit={handleLogin}>
-                    <div className='mb-3'>
-                        {/* <label>Username or Email address <span className='text-danger'>*</span></label> */}
+                  
                         <InputField type="text" name='username' className='form-control' placeholder='Enter Email Id' 
                         value={username}
                         onChange={handleUsernameChange}
                         autoComplete='off' label='Username or Email address'
                         />
                         {formErrors.username.length > 0 && (
-                            <ul className='text-danger'>
+                            <div className='text-danger'>
                                 {formErrors.username.map((error, index) => (
-                                    <li key={index}>{error}</li>
+                                    <span key={index}>{error}</span>
                                 ))}
-                            </ul>
+                            </div>
                          )}
-                    </div>
-
-                    <div className='mb-3'>
-                        {/* <label>Password  <span className='text-danger'>*</span></label> */}
+                   
                         <InputField type="password" name='password' className='form-control' placeholder='Enter Password' 
                         value={password}
                         onChange={handlePasswordChange} autoComplete='off' label="Password"
                         />
                         {formErrors.password.length > 0 && (
-                            <ul className='text-danger'>
+                            <div className='text-danger'>
                                 {formErrors.password.map((error, index) => (
-                                    <li key={index}>{error}</li>
+                                    <span key={index}>{error}</span>
                                 ))}
-                            </ul>
+                            </div>
                         )}
                         
-                    </div>
+                    
 
                     <div className='d-flex justify-content-between align-items-center'>
                         <label htmlFor="remeber" className='d-flex align-items-center'>

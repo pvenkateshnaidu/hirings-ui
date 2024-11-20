@@ -1,0 +1,87 @@
+[
+    {
+        "name":"fullname",
+        "label":"Full Name",
+        "type":"text",
+        "placeholder":"Enter your name",
+        "validation":{
+            "required":true,
+            "minlength":3,
+            "maxlength":10
+        }
+    },
+    {
+        "name":"email",
+        "label":"Email ID",
+        "type":"email",
+        "placeholder":"Enter your email",
+        "helpText": "We'll use your email to send updates and important information.",
+        "validation":{
+            "required":true,
+            "IsEmail":true
+        }
+    },
+    {
+        "name":"password",
+        "label":"Password",
+        "type":"password",
+        "placeholder":"Enter your password",
+        "validation":{
+            "required":true,
+            "minLength":6
+        }
+    },
+    {
+        "name":"mobile",
+        "label":"Mobile Number",
+        "type":"text",
+        "placeholder":"Enter your mobile number",
+        "prefix": "+91",
+        "validation":{
+            "required":true,
+            "minLength":6
+        }
+    },
+    {
+       "name":"workstatus",
+       "label":"Work Status",
+       "type":"radio",
+       "options":[
+        { "label": "I am experienced", "value": "experienced" },
+        { "label": "I am a fresher", "value": "fresher" }
+       ],
+       "validation":{
+        "required":true,
+        "minLength":6
+       }
+    },
+    {
+        "name":"city",
+        "label":"Current City",
+        "type":"text",
+        "options":[
+            { "label": "I am experienced", "value": "experienced" },
+            { "label": "I am a fresher", "value": "fresher" }
+        ],
+        "validation": {
+        "required": true
+        }
+    },
+{
+    "name":"state",
+    "label":"State",
+    "type":"select",
+    "placeholder": "Select your state",
+    "options": [
+      { "label": "Andhra pradesh", "value": "ap" },
+      { "label": "Telangana", "value": "telangana" },
+      { "label": "Assam", "value": "assam" },
+      { "label": "Uttar Pradesh", "value": "up" }
+    ],
+    "validation": {
+      "required": true
+    }
+
+}
+    
+]

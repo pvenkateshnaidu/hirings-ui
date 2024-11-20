@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import authService from '../services/authservice';
 
-// Async thunk for login
 export const loginUser = createAsyncThunk(
   'auth/signin',
   async ({ username, password }, thunkAPI) => {

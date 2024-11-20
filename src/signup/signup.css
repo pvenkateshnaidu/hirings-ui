@@ -1,0 +1,23 @@
+.register{
+    width: calc(100% - 380px);
+    padding: 35px;
+    box-shadow: 2px 2px 15px #e6ecff;
+    margin-left:auto;
+    border-radius: 15px;
+}
+::placeholder,::-ms-input-placeholder{
+    color:#717b9e;
+}
+
+.summary .form-check-inline{
+    margin-bottom: 0;
+}
+.formcontrol{
+    border: 1px solid #979ec2;
+}
+@media(max-width:768px){
+    .register{
+        margin: 0;
+        width:100%
+    }
+}

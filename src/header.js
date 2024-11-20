@@ -42,15 +42,15 @@ const Header = () => {
               </ul>
 
               <ul className='navbar-nav ms-auto'>
-                {/* <li className="nav-item">
-                  <a className="nav-link" href="#">Register your CV</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Recruiting</a>
-                </li> */}
                 <li className='nav-item'>
-                  <Link className="nav-link btn btn-primary" to="/login">
-                  <img src={loginIcon} alt="login"/>Login
+                  <Link className="nav-link btn btn-primary me-2" to="/login">
+                  Login
+                  </Link>
+                </li>
+
+                <li className='nav-item'>
+                  <Link className="nav-link btn btn-primary" to="/register">
+                  Register
                   </Link>
                 </li>
 

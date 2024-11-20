@@ -46,7 +46,7 @@ const Footer = () =>{
             </div>
 
             <div className='col-md-12'>
-                <div className='d-flex justify-content-between'>
+                <div className='d-flex justify-content-between flex-column flex-md-row'>
                     <div>© Skill On Hire 2024, All Rights Reserved</div>
                     <div className='d-flex'>
                         <a href="#" title='Terms of Use & IP' className='text-secondary me-3 text-decoration-none'>Terms of Use & IP</a>

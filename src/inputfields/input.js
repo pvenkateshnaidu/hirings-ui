@@ -36,7 +36,7 @@ const InputField = ({autocomplete,label,value,onChange,type='text',placeholder,r
 
 ): type === 'radio' ? (
     options.map((option) => (
-      <div key={option.value} className="me-2 mb-2">
+      <div key={option.value} className="form-check-inline me-2 mb-2">
         <input
           type="radio"
           id={option.value}
@@ -45,7 +45,6 @@ const InputField = ({autocomplete,label,value,onChange,type='text',placeholder,r
           checked={value === option.value}
           onChange={onChange}
           className="btn-check"
-         
         />
         <label className="btn btn-primary" htmlFor={option.value}>
           {option.label}
@@ -58,6 +57,7 @@ const InputField = ({autocomplete,label,value,onChange,type='text',placeholder,r
     <input
       type={type}
       value={value}
+      name={name}
       onChange={onChange}
       placeholder={placeholder}
       required={required}
