@@ -5,7 +5,8 @@ import Login from './login/login';
 import Home from './home';
 import PostJob from './postjob/postjob';
 import Dashboard from './components/dashboard/dashboard';
-
+import AdminHeader from './admin/adminHeader';
+import Employer from './employer/employer';
 
 const AppRoutes = () => {
 
@@ -20,6 +21,12 @@ const AppRoutes = () => {
             <Dashboard />
           </ProtectedRoute>
         } />
+        <Route path='/admin' element={
+        <ProtectedRoute>
+           <AdminHeader />
+        </ProtectedRoute>
+        }/>
+        <Route path='/employer' element={<Employer />} />
         <Route path='/postjob' element={<PostJob />} />
       </Routes>
     )

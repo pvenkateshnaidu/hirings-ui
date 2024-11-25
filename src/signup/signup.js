@@ -55,10 +55,8 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const errors = validate();
     setFormErrors(errors);
-
     if (Object.keys(errors).length === 0) {
       try{
         const response = await authService.signup(
@@ -84,7 +82,6 @@ const Signup = () => {
           state: ""
         });
 
-        // Redirect to login
         navigate('/login');
 
       }catch(err){
@@ -130,8 +127,7 @@ const Signup = () => {
                         name={field.name}
                         value={formValues[field.name]}
                         onChange={handleChange}
-                        className="form-select"
-                    >
+                        className="form-select">
                         <option value="">{field.placeholder}</option>
                         {options.map((option) => (
                         <option key={option.value} value={option.value}>
@@ -154,7 +150,6 @@ const Signup = () => {
                         value={formValues[field.name] || ''}
                         onChange={handleChange}
                         options={field.options}
-                        
                         />
                         {formErrors[field.name] && (
                         <p className="text-danger">{formErrors[field.name]}</p>
