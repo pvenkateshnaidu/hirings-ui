@@ -7,6 +7,7 @@ import PostJob from './postjob/postjob';
 import Dashboard from './components/dashboard/dashboard';
 import AdminHeader from './admin/adminHeader';
 import Employer from './employer/employer';
+import PostJobForm from './postjob/postjobForm';
 
 const AppRoutes = () => {
 
@@ -28,6 +29,7 @@ const AppRoutes = () => {
         }/>
         <Route path='/employer' element={<Employer />} />
         <Route path='/postjob' element={<PostJob />} />
+        <Route path='/postJobForm' element={<PostJobForm />}/>
       </Routes>
     )
   };

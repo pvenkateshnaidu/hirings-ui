@@ -2,11 +2,12 @@ import React,{useState} from "react";
 import './employer.css';
 import { Link } from "react-router-dom";
 import SideNav from "./sidenav";
+import Button from '@mui/material/Button';
 
 const Employer = () =>{
-    const [isSideNavOpen, setIsSideNavOpen] = useState(true);
+    const [isExpanded, setIsExpanded] = useState(true);
     const toggleSideNav = () => {
-        setIsSideNavOpen((prev) => !prev);
+        setIsExpanded((prev) => !prev);
     };
 
     return(
@@ -15,7 +16,7 @@ const Employer = () =>{
             <div className="container-fluid">
                 <div className='menuBar'>
                     <div>
-                        <i className="fa-solid fa-bars" onClick={()=>toggleSideNav(true)} aria-label="Toggle navigation"></i>
+                        <Button onClick={toggleSideNav} ><i className="fa-solid fa-bars"></i></Button>
                         <a className="navbar-brand ms-3" href="#">Hirings</a>
                     </div>
 
@@ -28,11 +29,11 @@ const Employer = () =>{
         </header>
 
         <div className="d-flex">   
-            <SideNav isOpen={isSideNavOpen} toggleSideNav={toggleSideNav}/>    
+            <SideNav isExpanded={isExpanded} toggleSideNav={toggleSideNav}/>    
             <section className="employer-job-Listings">
                 <div className="d-flex justify-content-between mb-3 align-items-center">
                     <h1 className="h1 m-0">All Jobs (1)</h1>
-                    <button className="btn btn-success">Post a new job</button>
+                    <Link className="btn btn-success" to="/postJobForm">Post a new job</Link>
                 </div>
 
                 <div className="card border-0">

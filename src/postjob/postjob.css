@@ -93,3 +93,23 @@ body{
 .text-danger{
     font-size: 14px;
 }
+
+
+.MuiTypography-h1.heading-1{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.smallText{
+    color:rgba(0,0,0,0.6)
+}
+label.MuiInputLabel-root{
+    font-size: 14px;
+    font-weight: 500;
+}
+.MuiInputLabel-asterisk{
+    color:red
+}
+.MuiInputBase-root .MuiInputBase-input{
+    padding:12px
+}

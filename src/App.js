@@ -20,7 +20,7 @@ function App() {
 function MainContent(){
   const location = useLocation();
 
-  const noHeaderFooterRoutes = ['/postjob','/employer'];
+  const noHeaderFooterRoutes = ['/postjob','/employer','/postJobForm'];
   const shouldShowHeaderFooter = !noHeaderFooterRoutes.includes(location.pathname);
 
   return (

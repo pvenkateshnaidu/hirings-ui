@@ -26,7 +26,7 @@
     padding: 10px 12px;
     display: block;
 }
-.active{
+.navactive{
     background: rgba(234,248,244,1);
 }
 .fa-bars{
