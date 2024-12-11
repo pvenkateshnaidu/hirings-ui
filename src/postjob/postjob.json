@@ -1,0 +1,68 @@
+[
+    {
+        "name": "company",
+        "type": "text",
+        "label": "Company you're hiring for",
+        "placeholder": "",
+        "required": true
+    },
+    {
+        "name": "jobtitle",
+        "type": "text",
+        "label": "Job title / Designation",
+        "placeholder": "",
+        "required": true
+    },
+    {
+        "name": "typeofjob",
+        "type": "text",
+        "label": "Type of Job",
+        "placeholder": "",
+        "required": true,
+        "options":["Full Time","Part Time","Both (Full-Time and Part-Time)"]
+    },
+    {
+        "name": "nightshift",
+        "type": "checkbox",
+        "label": "This is a night shift job",
+        "required": false
+    },
+    {
+        "type":"section",
+        "heading": "Location",
+        "description": "Let candidates know where they will be working from.",
+        "fields": [
+            {
+               "type":"checkbox", 
+              "name":"Work location type",
+              "options":["Work from office","Work from home","Field Job"]
+            }
+        ]
+    },
+    {
+        "type":"section",
+        "heading": "Compensation",
+        "description": "Job postings with right salary & incentives will help you find the right candidates.",
+        "fields": [
+            {
+              "name":"What is the pay type?",
+              "options":["Fixed Only","Fixed+Incentive","Incentive Only"]
+            }
+        ]
+    },
+    {
+        "name": "perks",
+        "type": "checkbox",
+        "label": "Do you offer any additional perks ?",
+        "required": true,
+        "options":["flexible Working Hours", "weekly payout", "overtime pay", "joining bonus"," annual bonus", "PF", "Travel Allowance",
+        "petrol Allowance", "Mobile Allowance", "internet allowance", "laptop","Health Insurance", "ESI(ESIC)", "Food/Meals", "Accomodation", "5 Working Days",
+        "One-Way Cab", "Two-Way Cab"]
+    },
+    {
+        "name": "joiningfee",
+        "type": "checkbox",
+        "label": "Is there any joining fee or deposit required from the candidate?",
+        "required": false
+    }
+]

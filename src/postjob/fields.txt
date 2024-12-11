@@ -1,0 +1,24 @@
+Company you're hiring for -> once login and added company the user can post jobs, if the user wants to change the company name, we pre providing optional modal along with details.
+Job title / Designation -> based on job title (111000+ Accountant applicants in the last 7 days )
+Job Role/ Category -> jobroles/ categories
+Type of Job -> fulltime, parttime, both(fulltime and parttime)
+this is night shift job -> checkbox optional
+
+
+location 
+let candidates know where they will be working from
+worklocation type -> work from office, work from home, field job along with info icon tooltiup
+
+
+compensation
+Job postings with right salary & incentives will help you find the right candidates.
+
+What is the pay type? -> fixedonly, fixed+incentive, incentive only
+Do you offer any additional perks ? -> flexible Working Hours, weekly payout, overtime pay, joining bonus, annual bonus, PF, Travel Allowance,
+petrol Allowance, Mobile Allowance, internet allowance, laptop,Health Insurance, ESI(ESIC), Food/Meals, Accomodation, 5 Working Days,
+One-Way Cab, Two-Way Cab
+
++add Other Perks -> Dynamic field
+
+Is there any joining fee or deposit required from the candidate?
+yes or no fields

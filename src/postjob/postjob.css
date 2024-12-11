@@ -113,3 +113,12 @@ label.MuiInputLabel-root{
 .MuiInputBase-root .MuiInputBase-input{
     padding:12px
 }
+.chip{
+    margin-bottom: 8px !important;
+}
+.labelName{
+    margin: 10px 0
+}
+.Main-section{
+    background: rgb(248, 248, 248);
+}
