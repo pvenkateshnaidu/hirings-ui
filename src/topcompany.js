@@ -63,7 +63,7 @@ const companies = [
     <div className="col-md-3">
       <div className="company-card card h-100">
         <div className="card-body">
-        <img src={require(`./${company.logo}`)} alt={company.name} className="card-img-top mx-auto" style={{ width: "auto", height:"35px",objectfit:"contain" }} />
+        <img src={require(`./${company.logo}`)} alt={company.name} className="card-img-top mx-auto" style={{ width: "auto", height:"25px",objectfit:"contain" }} />
           <div className="rating">
             <span className="stars">★★★★★</span> ({company.rating})
           </div>

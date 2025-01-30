@@ -22,12 +22,14 @@ body {
     justify-content: space-between;
     padding: 75px 40px 0;
     position: relative;
+    overflow: hidden;
   }
   .banner-image{
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 0;
+    top:30px
   }
   .banner-text{
     font-size: 20px;
@@ -79,9 +81,7 @@ body {
 
   
   p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    color: #555;
+     color: #555;
   }
   
   .search-bar {
@@ -419,7 +419,6 @@ box-shadow: none !important;
   font-size: 24px;
   font-weight: 700;
   color: #05264E;
-  height:45px
 }
 .footer-link{
   display: block;
@@ -466,6 +465,29 @@ a.text-secondary{
 .text-danger{
   font-size: 12px;
   margin: 0
+}
+
+/*23-01/2025*/
+.suggestions-list{
+  position: absolute;
+    background: #fff;
+    padding: 10px !important;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #ecf2fe;
+    max-height: 150px;
+    overflow: auto;
+}
+.suggestions-list li{
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.card-title{
+  font-weight: 500;
+  font-size: 16px;
+}
+.card-title+small{
+  color:#5a6069
 }
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');

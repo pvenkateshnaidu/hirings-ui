@@ -27,6 +27,7 @@ export const authSlice = createSlice({
       state.user = null;
       state.isAuthenticated = false;
       authService.logout();
+      localStorage.removeItem('user');
     },
   },
   extraReducers: (builder) => {
@@ -38,6 +39,7 @@ export const authSlice = createSlice({
         state.user = action.payload;
         state.isAuthenticated = true;
         state.status = 'succeeded';
+        localStorage.setItem('user', JSON.stringify(action.payload));
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.status = 'failed';

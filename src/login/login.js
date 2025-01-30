@@ -58,12 +58,6 @@ const handlePasswordChange = (e) => {
     setFormErrors(prevErrors => ({ ...prevErrors, password: '' }));
 };
 
-useEffect(() => {
-    if (auth.status === 'succeeded' && auth.isAuthenticated) {
-        navigate('/dashboard');
-    }
-}, [auth.status, auth.isAuthenticated, navigate]);
-
 
     return(
         <>

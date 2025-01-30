@@ -1,11 +1,20 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import authService from '../services/authservice';
 
-const ProtectedRoute = ({ children }) => {
-    const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+const ProtectedRoute = ({ children, allowedRoles, redirectTo }) => {
+
+    const user = authService.getCurrentUser();
+
+    if (!user) {
+      return <Navigate to="/login" />;
+    }
   
-    return isAuthenticated ? children : <Navigate to="/login" />;
+    if (!allowedRoles.includes(user.role)) {
+      return <Navigate to={redirectTo || "/unauthorized"} />;
+    }
+  
+    return children;
   };
   
   export default ProtectedRoute;

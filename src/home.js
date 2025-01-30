@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import SearchIcon from './images/search.svg';
 import TopCompanies  from './topcompany';
 import BannerImage from './images/Person.png';
@@ -68,7 +70,7 @@ const Banner = () => {
               </h1>
               <p className='banner-text'>Everything you need is one search away...!!</p>
               <SearchBar />
-              <PopularSearches />
+              {/* <PopularSearches /> */}
               <Stats />
             </div>
           </div>
@@ -84,42 +86,107 @@ const Banner = () => {
   };
   
   const SearchBar = () => {
+    const [k, setK] = useState('');
+    const [e, setE] = useState('');
+    const [l, setL] = useState('');
+    const navigate = useNavigate();
+    const [filteredRoles, setFilteredRoles] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const jobRoles = [
+    'Software Developer',
+    'Frontend Developer',
+    'Backend Developer',
+    'Full Stack Developer',
+    'Project Manager',
+    'Data Scientist',
+    'UX/UI Designer',
+    'DevOps Engineer',
+    'Product Manager',
+    'Quality Assurance',
+    'System Architect',
+  ];
+  // Filter the job roles based on the keyword typed by the user
+  const handleKeywordChange = (e) => {
+    const value = e.target.value;
+    setK(value);
+
+    // Filter job roles based on the input value
+    if (value) {
+      const filtered = jobRoles.filter((role) =>
+        role.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredRoles(filtered);
+      setShowSuggestions(true);
+    } else {
+      setShowSuggestions(false);
+    }
+  };
+
+  // Select a suggestion when the user clicks on it
+  const handleRoleSelect = (role) => {
+    setK(role);
+    setShowSuggestions(false);
+  };
+
+    const createQueryString = (params) => {
+      const query = new URLSearchParams();
+      for (let key in params) {
+        if (params[key]) {
+          query.append(key, params[key]);
+        }
+      }
+      return `?${query.toString()}`;
+    };
+
+
+    const handleSearch = () => {
+      const queryString = createQueryString({ k, l, e });
+      navigate(`/joblist${queryString}`);
+  };
+
+    
     return (
       <div className="search-bar">
         <img src={SearchIcon} alt="search" />
   
         <div className='searchelement'>
-        <input type="text" placeholder="Search jobs by 'title'" />
+        <input type="text" placeholder="Search jobs by 'title'" value={k}  onChange={handleKeywordChange}/>
+
+        {showSuggestions && filteredRoles.length > 0 && (
+          <ul className="suggestions-list">
+            {filteredRoles.map((role, index) => (
+              <li key={index} onClick={() => handleRoleSelect(role)}>
+                {role}
+              </li>
+            ))}
+          </ul>
+        )}
+
+{showSuggestions && filteredRoles.length === 0 && (
+        <p className="suggestions-list">No results found</p> // Display message when no matches are found
+      )}
+
         </div>
         <div className='searchelement'>
-          <select>
-            <option>Select Experience Level</option>
-            <option>Entry Level</option>
-            <option>Mid Level</option>
-            <option>Senior Level</option>
+          <select 
+             value={e}
+             onChange={(e) => setE(e.target.value)}>
+            <option value=''>Select Experience Level</option>
+            <option value={1}>1 Year</option>
+            <option value={2}>2 Year</option>
+            <option value={3}>3 Year</option>
           </select>
         </div>
-        <input type="text" placeholder="Enter Location"  className='border-0'/>
-        <button className='btn btn-primary fj' type='submit'>Find Jobs</button>
+        <input type="text" placeholder="Enter Location"  className='border-0' value={l}
+                onChange={(e) => setL(e.target.value)}/>
+
+        <button onClick={handleSearch} className='btn btn-primary fj' type='submit'>Find Jobs</button>
       </div>
     );
   };
   
-  const PopularSearches = () => {
-    return (
-      <div className="popular-searches">
-        <strong>Popular Searches: </strong>
-        <a href="#">Designer</a>
-        <a href="#">Web</a>
-        <a href="#">IOS</a>
-        <a href="#">Developer</a>
-        <a href="#">PHP</a>
-        <a href="#">Senior</a>
-        <a href="#">Engineer</a>
-        <a href="#">UI Developer</a>
-      </div>
-    );
-  };
+
   
   const Stats = () => {
     return (
@@ -357,7 +424,7 @@ const Banner = () => {
           <div className='card border-0 card-shadow'>
             <div className='card-body text'>
               <p className='position-relative'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-quote" viewBox="0 0 16 16">
               <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
               </svg>
                Hirings made it easy to work with, interview, and select our best match for a talent agency.</p>
@@ -388,7 +455,7 @@ const Banner = () => {
                   <form className='col-md-4'>
                     <div className='input-group'>
                     <input type='text' name='subscribe' className='form-control border-0 form-input' placeholder='Enter Your Email Address'/>
-                    <button type='submit' className='submit btn btn-primary'><i class="bi bi-send me-1"></i>Subscribe</button>
+                    <button type='submit' className='submit btn btn-primary'><i className="bi bi-send me-1"></i>Subscribe</button>
                     </div>
                   </form>
                 
