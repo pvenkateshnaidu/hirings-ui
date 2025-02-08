@@ -64,5 +64,69 @@
         "type": "checkbox",
         "label": "Is there any joining fee or deposit required from the candidate?",
         "required": false
+    },
+    {
+        "type":"section",
+        "heading": "Basic Requirements",
+        "description": "We’ll use these requirement details to make your job visible to the right candidates.",
+        "fields": [
+            {
+                "name": "Minimum Education",
+                "type": "checkbox",
+                "label": "Minimum Education",
+                "required": true,
+                "options":["10th or below 10th","12th Pass","Diploma","ITI","Graduate","Post Graduate"]
+            },
+            {
+                "name": "English level required",
+                "type": "checkbox",
+                "label": "English level required",
+                "required": true,
+                "options":["No English","Basic English","Good English"]
+            },
+            {
+                "name": "Total Experience Required",
+                "type": "checkbox",
+                "label": "Total Experience Required",
+                "required": true,
+                "options":["Any","Experienced Only","Fresher Only"],
+                "subText":"Only candidates with upto 1 year of experience will be eligible to apply"
+            },
+            {
+                "name": "Minimum experience",
+                "type": "checkbox",
+                "label": "Minimum experience",
+                "required": true,
+                "options":["6 Months","1 Year","2 Years","3 Years","5 Years","10 Years"]
+            }
+            
+        ]
+    },
+    {
+        "name": "company",
+        "type": "text",
+        "label": "Company you're hiring for",
+        "placeholder": "",
+        "required": true
+    },
+    {
+        "name": "Recommended by AI",
+        "type": "checkbox",
+        "label": "Recommended by AI",
+        "required": true,
+        "options":["Assembly Line Operator", "UI / UX Design", "Website Development", "Front End Developer"," Assembly Technician", "Front-End Programmer", "Frontend UI/UX Developer",
+        "Junior Front End Developer", "React.js Developer"]
+    },
+    
+    {
+        "type":"section",
+        "heading": "Additional Requirements (Optional)",
+        "description": "Add additional requirement so that we can help you find the right candidates",
+        "fields": [
+            {
+              "options":["Industry","Degree / Specialization","Gender","Age","Regional Languages","Skills"]
+            }
+        ]
     }
+    
 ]

@@ -33,9 +33,10 @@ const AppRoutes = () => {
         <Route path='/postjob' element={<PostJob />} />
         
         <Route path='/postJobForm' element={
-          <ProtectedRoute allowedRoles={['employer']}>
+          /*<ProtectedRoute allowedRoles={['employer']}>
           <PostJobForm />
-          </ProtectedRoute>          
+          </ProtectedRoute>*/          
+          <PostJobForm />
           }
         />
 
